@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dawn Of Redemption</title>
-    <style href="stylesheed"></style>
+    <title>Dawn Of Redemption — Official</title>
+
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <header></header>
-    <aside></aside>
-    <iframe></iframe>
-    <footer></footer>
+    <!-- LOGO SUPERIOR -->
+    <header class="header">
+      <img
+        src="./css/img/titulo_logo.png"
+        class="logo"
+        alt="Dawn Of Redemption Logo"
+      />
+    </header>
+
+    <!-- BOTONES PRINCIPALES -->
+    <section class="top-controls">
+      <button onclick="loadContent('newsletter.html')" class="btn gold">
+        Suscribirse
+      </button>
+      <button onclick="loadContent('cronicas.html')" class="btn dark">
+        Crónicas
+      </button>
+    </section>
+
+    <!-- IFRAME CONTENIDO DINÁMICO -->
+    <section class="iframe-container">
+      <iframe id="viewer" src="" frameborder="0"></iframe>
+    </section>
+
+    <!-- GRID CON LAS TRES OPCIONES -->
+    <section class="grid-menu">
+      <div class="card" onclick="loadContent('galeria.html')">
+        <h3>Galería</h3>
+      </div>
+
+      <div class="card" onclick="loadContent('letras.html')">
+        <h3>Letras</h3>
+      </div>
+
+      <div class="card" onclick="loadContent('escuchar.html')">
+        <h3>Escuchar Música</h3>
+      </div>
+    </section>
+
+    <script>
+      function loadContent(page) {
+        document.getElementById("viewer").src = page;
+      }
+    </script>
   </body>
 </html>
