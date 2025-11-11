@@ -1,0 +1,122 @@
+/* Fondo transparente para que se vea el fondo del index */
+body {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Cinzel Decorative", serif;
+}
+
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* 200px panel lateral - resto visor */
+  height: 100vh;
+}
+
+/* Lateral con botones */
+.barra-lateral {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column; /* ← botones en columna */
+  gap: 8px;
+
+  /* Scroll transparente */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.barra-lateral::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.barra-lateral::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.barra-lateral::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.6);
+}
+
+/* Botones */
+.barra-lateral button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.6);
+  color: white;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  font-family: "Cinzel Decorative", serif;
+  text-transform: uppercase;
+}
+
+.barra-lateral button:hover {
+  background: rgba(255, 215, 0, 0.4);
+  color: black;
+}
+
+.barra-lateral button.activo {
+  background: rgba(255, 215, 0, 0.6);
+  color: black;
+  font-weight: bold;
+  border: 1px solid gold;
+}
+
+/* Visor de imágenes */
+.visor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visor img {
+  width: auto;
+  height: 95vh;
+  object-fit: contain;
+
+  /* Marco dorado */
+  border: 6px solid transparent;
+  border-radius: 12px;
+
+  background-image: linear-gradient(#00000000, #00000000),
+    linear-gradient(135deg, #ffd700, #f8c22e, #caa315, #f8c22e, #ffd700);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  /* Glow suave */
+  box-shadow: 0 0 14px rgb(0, 0, 0, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el ratón más brillo */
+.visor img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 22px rgba(255, 215, 0, 0.95);
+}
+
+/* Scroll transparente */
+.barra-lateral {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Scroll en Chrome, Edge, Safari */
+.barra-lateral::-webkit-scrollbar {
+  width: 6px;
+  background: transparent; /* → fondo del scroll transparente */
+}
+
+.barra-lateral::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* color de la barrita */
+  border-radius: 4px;
+}
+
+.barra-lateral::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.6); /* dorado al pasar el ratón */
+}

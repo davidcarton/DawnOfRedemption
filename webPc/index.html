@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Tipografía medieval -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Oficial Web Site</title>
+
+    <!-- Script para cargar las páginas dentro del iframe -->
+    <script src="./src/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Partículas sobre el fondo -->
+    <canvas id="particulas"></canvas>
+
+    <header>
+      <img
+        src="./css/img/titulo.png"
+        alt="Dawn Of Redemption"
+        class="logo-titulo"
+      />
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#" data-url="./html/cronicas.html" class="texto-oro"
+            >Crónicas</a
+          >
+        </li>
+        <li>
+          <a href="#" data-url="./html/galeria.html" class="texto-oro"
+            >Galería</a
+          >
+        </li>
+        <li>
+          <a href="#" data-url="./html/canciones.html" class="texto-oro"
+            >Canciones</a
+          >
+        </li>
+        <li>
+          <a href="#" data-url="./html/suscribete.html" class="texto-oro"
+            >Suscríbete</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <iframe id="contenido"></iframe>
+    </main>
+
+    <footer>
+      <p>© 2025 - Dawn Of Redemption</p>
+    </footer>
+  </body>
+</html>

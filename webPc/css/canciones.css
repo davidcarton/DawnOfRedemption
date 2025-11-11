@@ -1,0 +1,85 @@
+/* Fondo transparente para mostrar fondo del index */
+body {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Cinzel Decorative", serif;
+}
+
+/* Grid del layout */
+.contenedor-canciones {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+}
+
+/* Panel lateral con lista de canciones */
+.barra-lateral {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  padding: 5px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Chrome / Edge / Safari */
+.barra-lateral::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+.barra-lateral::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+.barra-lateral::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.6);
+}
+
+/* BOTONES DE LAS CANCIONES */
+.barra-lateral button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Cinzel Decorative", serif;
+
+  text-transform: uppercase;
+  white-space: nowrap; /* evita saltos de línea en el texto */
+  width: 100%; /* todos los botones mismo ancho */
+  text-align: left; /* título alineado a la izquierda */
+}
+
+.barra-lateral button.activo {
+  background: rgba(255, 215, 0, 0.6);
+  color: black;
+  font-weight: bold;
+  border: 1px solid gold;
+}
+
+.barra-lateral button:hover {
+  background: rgba(255, 215, 0, 0.4);
+  color: black;
+}
+
+/* VISOR DEL VIDEO */
+.visor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visor iframe {
+  width: 75%;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+}

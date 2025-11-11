@@ -1,0 +1,123 @@
+/* ─────────────────────────────
+   RESET
+─────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ─────────────────────────────
+   BODY + GRID
+─────────────────────────────── */
+body {
+  background: url("./img/fondo.jpg") center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: grid;
+
+  grid-template-rows: 160px 40px 1fr 30px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+/* ─────────────────────────────
+   HEADER (logo)
+─────────────────────────────── */
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.logo-titulo {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────
+   NAV (menú superior)
+─────────────────────────────── */
+nav {
+  grid-area: nav;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly; /* Distribuye los enlaces por todo el ancho */
+  width: 100%;
+}
+
+nav a {
+  font-family: "Cinzel Decorative", serif;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 6px 20px;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.9);
+}
+
+/* ─────────────────────────────
+   MAIN + IFRAME
+─────────────────────────────── */
+main {
+  grid-area: main;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+}
+
+/* ─────────────────────────────
+   FOOTER
+─────────────────────────────── */
+footer {
+  grid-area: footer;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* ─────────────────────────────
+   PARTICULAS (canvas sobre la pantalla)
+─────────────────────────────── */
+#particulas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}

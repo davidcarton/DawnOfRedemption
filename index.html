@@ -3,55 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dawn Of Redemption — Official</title>
+    <link rel="stylesheet" href="loading.css" />
+    <script defer>
+      // Función que detecta si es móvil (userAgent + tamaño pantalla)
+      function esMovil() {
+        const userAgent =
+          /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
+            navigator.userAgent
+          );
+        const pequeño = window.matchMedia("(max-width: 768px)").matches;
+        return userAgent || pequeño;
+      }
 
-    <link rel="stylesheet" href="css/style.css" />
+      // Delay para que se vea el loading
+      setTimeout(() => {
+        if (esMovil()) {
+          window.location.href = "./webMovil/index.html";
+        } else {
+          window.location.href = "./webPc/index.html";
+        }
+      }, 4000); // 4 segundos de carga
+    </script>
+    <title>Loading...</title>
   </head>
 
   <body>
-    <!-- LOGO SUPERIOR -->
-    <header class="header">
-      <img
-        src="./css/img/titulo_logo.png"
-        class="logo"
-        alt="Dawn Of Redemption Logo"
-      />
-    </header>
-
-    <!-- BOTONES PRINCIPALES -->
-    <section class="top-controls">
-      <button onclick="loadContent('newsletter.html')" class="btn gold">
-        Suscribirse
-      </button>
-      <button onclick="loadContent('cronicas.html')" class="btn dark">
-        Crónicas
-      </button>
-    </section>
-
-    <!-- IFRAME CONTENIDO DINÁMICO -->
-    <section class="iframe-container">
-      <iframe id="viewer" src="" frameborder="0"></iframe>
-    </section>
-
-    <!-- GRID CON LAS TRES OPCIONES -->
-    <section class="grid-menu">
-      <div class="card" onclick="loadContent('galeria.html')">
-        <h3>Galería</h3>
-      </div>
-
-      <div class="card" onclick="loadContent('letras.html')">
-        <h3>Letras</h3>
-      </div>
-
-      <div class="card" onclick="loadContent('escuchar.html')">
-        <h3>Escuchar Música</h3>
-      </div>
-    </section>
-
-    <script>
-      function loadContent(page) {
-        document.getElementById("viewer").src = page;
-      }
-    </script>
+    <img src="loading.jpg" class="logo" />
+    <div class="loader"></div>
   </body>
 </html>
