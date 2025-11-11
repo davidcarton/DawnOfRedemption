@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background-image: url(./img/logoFondo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  display: grid;
+}
