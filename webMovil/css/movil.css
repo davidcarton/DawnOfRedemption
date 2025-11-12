@@ -66,7 +66,7 @@ nav a:hover {
   text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
 }
 
-/* MAIN HERO TEXT */
+/* MAIN */
 main {
   grid-area: main;
   display: flex;
