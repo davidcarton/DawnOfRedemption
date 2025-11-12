@@ -1,17 +1,9 @@
 // Resize Pc -- Movil -- Pc -------------------------------------------- //
-function redetectar() {
+// Detecta si pasa a formato escritorio —> regresar al loading
+window.addEventListener("resize", () => {
   const esMovil = window.matchMedia("(max-width: 768px)").matches;
 
-  if (esMovil && window.location.pathname.includes("webPc")) {
-    // Si estamos en versión PC y ahora pasa a móvil → volver al loading
-    window.location.href = "../index.html";
+  if (!esMovil) {
+    window.location.href = "../index.html"; // volver al loading
   }
-
-  if (!esMovil && window.location.pathname.includes("webMovil")) {
-    // Si estamos en versión móvil y ahora pasa a PC → volver al loading
-    window.location.href = "../index.html";
-  }
-}
-
-// Detecta cambio de tamaño en vivo
-window.addEventListener("resize", redetectar);
+});

@@ -1,14 +1,92 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* GRID + FONDO */
 body {
-  background-color: black;
-  background-image: url(./img/logoFondo.png);
+  background-image: url("./img/logoFondo.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 100vh;
+  background-color: black;
+  width: auto;
+  height: 100vh;
+  font-family: "Cinzel Decorative", serif;
+
   display: grid;
+  grid-template-rows: 130px 50px 1fr 40px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+/* HEADER */
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* NAV */
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: gold;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+}
+
+/* MAIN HERO TEXT */
+main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitulo {
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* FOOTER */
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: white;
 }
