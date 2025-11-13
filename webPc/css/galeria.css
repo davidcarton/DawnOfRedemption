@@ -1,4 +1,4 @@
-/* Fondo transparente para que se vea el fondo del index */
+/* BODY con fondo transparente */
 body {
   background: transparent;
   margin: 0;
@@ -7,13 +7,14 @@ body {
   font-family: "Cinzel Decorative", serif;
 }
 
+/* GRID */
 .contenedor-galeria {
   display: grid;
   grid-template-columns: 200px 1fr; /* 200px panel lateral - resto visor */
   height: 100vh;
 }
 
-/* Lateral con botones */
+/* BARRA LATERAL */
 .barra-lateral {
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
@@ -21,9 +22,8 @@ body {
   overflow-y: auto;
 
   display: flex;
-  flex-direction: column; /* ← botones en columna */
+  flex-direction: column;
   gap: 8px;
-
   /* Scroll transparente */
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
@@ -43,7 +43,7 @@ body {
   background: rgba(255, 215, 0, 0.6);
 }
 
-/* Botones */
+/* BOTONES */
 .barra-lateral button {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 215, 0, 0.6);
@@ -71,7 +71,7 @@ body {
   border-radius: 12px;
 }
 
-/* Visor de imágenes */
+/* VISOR DE IMAGENES */
 .visor {
   display: flex;
   justify-content: center;
@@ -107,19 +107,4 @@ body {
 .barra-lateral {
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-}
-
-/* Scroll en Chrome, Edge, Safari */
-.barra-lateral::-webkit-scrollbar {
-  width: 6px;
-  background: transparent; /* → fondo del scroll transparente */
-}
-
-.barra-lateral::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3); /* color de la barrita */
-  border-radius: 4px;
-}
-
-.barra-lateral::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 215, 0, 0.6); /* dorado al pasar el ratón */
 }

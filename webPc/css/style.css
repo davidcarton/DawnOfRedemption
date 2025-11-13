@@ -1,20 +1,18 @@
-/* ─────────────────────────────
-   RESET
-─────────────────────────────── */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ─────────────────────────────
-   BODY + GRID
-─────────────────────────────── */
+/* BODY */
 body {
   background: url("./img/fondo.jpg") center/cover no-repeat fixed;
-  min-height: 100vh;
+  height: 100vh;
+  width: auto;
   display: grid;
 
+  /* GRID */
   grid-template-rows: 160px 40px 1fr 30px;
   grid-template-areas:
     "header"
@@ -23,9 +21,7 @@ body {
     "footer";
 }
 
-/* ─────────────────────────────
-   HEADER (logo)
-─────────────────────────────── */
+/* HEADER (logo) */
 header {
   grid-area: header;
   display: flex;
@@ -41,9 +37,7 @@ header {
   pointer-events: none;
 }
 
-/* ─────────────────────────────
-   NAV (menú superior)
-─────────────────────────────── */
+/* NAV (con efecto blur) */
 nav {
   grid-area: nav;
   background: rgba(0, 0, 0, 0.15);
@@ -80,9 +74,7 @@ nav a:hover {
   text-shadow: 0 0 6px rgba(255, 215, 0, 0.9);
 }
 
-/* ─────────────────────────────
-   MAIN + IFRAME
-─────────────────────────────── */
+/* MAIN + IFRAME */
 main {
   grid-area: main;
   overflow: hidden;
@@ -95,9 +87,7 @@ iframe {
   background: transparent;
 }
 
-/* ─────────────────────────────
-   FOOTER
-─────────────────────────────── */
+/* FOOTER */
 footer {
   grid-area: footer;
   background: rgba(0, 0, 0, 0.2);
@@ -109,9 +99,7 @@ footer {
   font-size: 14px;
 }
 
-/* ─────────────────────────────
-   PARTICULAS (canvas sobre la pantalla)
-─────────────────────────────── */
+/* PARTICULAS (canvas sobre la pantalla) */
 #particulas {
   position: fixed;
   top: 0;

@@ -1,5 +1,4 @@
 // Resize Pc -- Movil ----------------------------------------------------- //
-// Detecta si pasa a formato móvil —> regresar al loading
 window.addEventListener("resize", () => {
   const esMovil = window.matchMedia("(max-width: 768px)").matches;
 
@@ -54,7 +53,7 @@ function crearParticula() {
     x,
     y,
     size: Math.random() * 0.8 + 0.2, // pequeñas
-    speed: Math.random() * 0.2 + 0.1, // velocidad
+    speed: Math.random() * 0.1 + 0.05, // velocidad
     alpha: Math.random() * 0.6 + 0.2, // brillo
     flicker: Math.random() * 0.04 + 0.01,
   };
