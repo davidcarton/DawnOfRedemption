@@ -12,9 +12,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100vh;
+
+  /* background-attachment: fixed;  <-- Causa saltos en móvil */
+  min-height: 100dvh; /* Solución correcta en móvil */
+
   font-family: "Cinzel Decorative", serif;
   display: grid;
   grid-template-rows: 120px 35px 1fr 40px;
@@ -37,8 +38,8 @@ header {
 }
 
 .logo {
-  height: auto;
   width: 100%;
+  height: auto;
   object-fit: contain;
   opacity: 0.9;
 }
@@ -74,7 +75,7 @@ main {
   gap: 14px;
 }
 
-/* Introduccion */
+/* Introducción */
 .intro-texto {
   width: 90%;
   text-align: center;
@@ -85,14 +86,13 @@ main {
   letter-spacing: 0.5px;
   margin-top: 10px;
 
-  /* Borde negro alrededor del texto */
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
 }
 
 /* BARRA SECCIÓN CANCIONES */
 .barra-seccion {
-  width: 100vw;
+  width: 100%; /* 100vw causaba recorte en móvil */
   height: 30px;
 
   display: flex;
@@ -110,9 +110,9 @@ main {
   font-size: 16px;
   letter-spacing: 2px;
 
-  position: sticky; /* ← SE QUEDA PEGADA */
-  top: 0; /* ← Se pega arriba */
-  z-index: 999; /* ← Pasa por encima de todo */
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 /* GRID DE CUADRADOS PARA CANCIONES */
@@ -120,7 +120,7 @@ main {
   width: 100%;
   padding: 15px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-top: 5px;
 }
@@ -128,20 +128,45 @@ main {
 /* CADA CUADRO */
 .cuadro {
   width: 100%;
-  aspect-ratio: 1/1; /* cuadrado perfecto */
+  aspect-ratio: 1/1; /* Mantener forma cuadrada */
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 215, 0, 0.4);
   border-radius: 6px;
+  overflow: hidden; /* Evita que la imagen sobresalga */
+  position: relative; /* Para colocar el título encima */
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+/* IMÁGENES DE LOS CUADROS */
+.cuadro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  border-radius: 6px;
+}
+
+/* TÍTULO SOBRE LA IMAGEN */
+.titulo-cuadro {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  padding: 4px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+
+  border-radius: 0 0 6px 6px;
 }
 
 /* FOOTER */
