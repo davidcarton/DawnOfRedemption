@@ -11,6 +11,9 @@ window.addEventListener("resize", () => {
 const enlaces = document.querySelectorAll("nav a");
 const iframe = document.getElementById("contenido");
 
+// Cargar automáticamente cronicas.html al iniciar
+iframe.src = "./html/cronicas.html";
+
 enlaces.forEach((enlace) => {
   enlace.addEventListener("click", (e) => {
     e.preventDefault(); // evita salir a otra página
@@ -84,7 +87,7 @@ function animar() {
     // Movimiento de arriba -> hacia abajo
     p.y += p.speed;
 
-    // Si sale del área → regeneramos una partícula nueva en la parte superior
+    // Regeneración
     if (p.y > areaLuz.yMax * canvas.height) {
       particulas[i] = crearParticula();
       particulas[i].y = areaLuz.yMin * canvas.height; // reaparece arriba
