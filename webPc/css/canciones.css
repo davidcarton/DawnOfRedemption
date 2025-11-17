@@ -52,8 +52,8 @@ body {
   font-family: "Cinzel Decorative", serif;
 
   text-transform: uppercase;
-  white-space: nowrap; /* evita saltos de línea en el texto */
-  width: 100%; /* todos los botones mismo ancho */
+  white-space: nowrap;
+  width: 100%;
   text-align: left;
 }
 

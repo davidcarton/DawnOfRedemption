@@ -97,9 +97,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto al pasar el ratón más brillo */
 .visor img:hover {
-  transform: scale(1.02);
   box-shadow: 0 0 22px rgba(255, 215, 0, 0.95);
 }
 

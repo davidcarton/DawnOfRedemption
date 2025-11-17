@@ -28,6 +28,3 @@ for (let i = 1; i <= TOTAL_IMAGENES; i++) {
 
 // Mostrar primera imagen al cargar (opcional)
 imagenActual.src = `../css/img/galeria/img(1).jpg`;
-
-// Marcar el primer botón al iniciar
-lista.firstChild.classList.add("activo");

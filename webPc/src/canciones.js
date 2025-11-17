@@ -1,45 +1,6 @@
 // LISTA DE CANCIONES ( título + URL )
 const canciones = [
   {
-    titulo: "Sombras de Cristal",
-    url: "https://www.youtube.com/embed/w36fBVHoDqo",
-  },
-  { titulo: "Amor sin voz", url: "https://www.youtube.com/embed/Eu1ulIvha9s" },
-  {
-    titulo: "Ecos del Silencio",
-    url: "https://www.youtube.com/embed/pVIhuDvryH8",
-  },
-  {
-    titulo: "Voces del Alma",
-    url: "https://www.youtube.com/embed/M8tE3YaJKDw",
-  },
-  {
-    titulo: "Noche del Alma",
-    url: "https://www.youtube.com/embed/d-stNaPpUhw",
-  },
-  {
-    titulo: "Destierro del Alma",
-    url: "https://www.youtube.com/embed/xPHmEYYhvU4",
-  },
-  { titulo: "Signo Celeste", url: "https://www.youtube.com/embed/W7aHcubkh5M" },
-  {
-    titulo: "Del Polvo al Amanecer",
-    url: "https://www.youtube.com/embed/fSGAe01s_k0",
-  },
-  {
-    titulo: "El Ultimo Guardián",
-    url: "https://www.youtube.com/embed/ih8GoJuvaPQ",
-  },
-  { titulo: "Ala Dorada", url: "https://www.youtube.com/embed/K9S8k7WJzEc" },
-  {
-    titulo: "Luz entre las Cenizas",
-    url: "https://www.youtube.com/embed/OgpoSm0iJB8",
-  },
-  {
-    titulo: "El último Oraculo",
-    url: "https://www.youtube.com/embed/hYxjl9VN9rI",
-  },
-  {
     titulo: "Juramento del Alba",
     url: "https://www.youtube.com/embed/Um764ulZuCg",
   },
@@ -51,7 +12,42 @@ const canciones = [
     titulo: "Eterno Amnecer",
     url: "https://www.youtube.com/embed/GYeN7NWs_3A",
   },
-  { titulo: "Reino Forjado", url: "https://www.youtube.com/embed/xLFjzhekxHk" },
+  {
+    titulo: "La Voz en la Tempestad",
+    url: "https://www.youtube.com/embed/EQZbe6tloMw",
+  },
+  {
+    titulo: "Eco de la luz",
+    url: "https://www.youtube.com/embed/cBYHBq5Bv6w",
+  },
+  {
+    titulo: "El ultimo Destello",
+    url: "https://www.youtube.com/embed/dPt8XfZG0hY",
+  },
+  {
+    titulo: "Guardian del Fuego",
+    url: "https://www.youtube.com/embed/XbByIAspsFs",
+  },
+  {
+    titulo: "Incierto Amanecer",
+    url: "https://www.youtube.com/embed/KPdlwgCdUkc",
+  },
+  {
+    titulo: "Fuego Imparable",
+    url: "https://www.youtube.com/embed/TvNwGxQzgAI",
+  },
+  {
+    titulo: "Eco del Alma",
+    url: "https://www.youtube.com/embed/TRcX7iL6T9w",
+  },
+  {
+    titulo: "Legado del Viento",
+    url: "https://www.youtube.com/embed/gWk_D4ao4Xw",
+  },
+  {
+    titulo: "Guardianes del Alba",
+    url: "https://www.youtube.com/embed/",
+  },
 ];
 
 // Crear boton con url
@@ -76,6 +72,3 @@ canciones.forEach((cancion) => {
 
   lista.appendChild(boton);
 });
-
-// Cargar la primera canción automáticamente
-videoActual.src = `${cancion.url}?autoplay=1&rel=0&modestbranding=1`;

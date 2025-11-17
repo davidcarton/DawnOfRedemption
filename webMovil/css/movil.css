@@ -12,13 +12,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
-
-  /* background-attachment: fixed;  <-- Causa saltos en móvil */
-  min-height: 100dvh; /* Solución correcta en móvil */
+  min-height: 100dvh;
 
   font-family: "Cinzel Decorative", serif;
   display: grid;
-  grid-template-rows: 120px 35px 1fr 40px;
+  grid-template-rows: 120px 35px 1fr 25px;
   grid-template-areas:
     "header"
     "nav"
@@ -109,10 +107,6 @@ main {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 2px;
-
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 /* GRID DE CUADRADOS PARA CANCIONES */
