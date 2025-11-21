@@ -1,51 +1,27 @@
 // LISTA DE CANCIONES ( título + URL )
 const canciones = [
   {
-    titulo: "Juramento del Alba",
-    url: "https://www.youtube.com/embed/Um764ulZuCg",
-  },
-  {
-    titulo: "Caballero del Silencio",
-    url: "https://www.youtube.com/embed/gpg_qqMHFaA",
-  },
-  {
-    titulo: "Eterno Amnecer",
-    url: "https://www.youtube.com/embed/GYeN7NWs_3A",
-  },
-  {
-    titulo: "La Voz en la Tempestad",
-    url: "https://www.youtube.com/embed/EQZbe6tloMw",
-  },
-  {
-    titulo: "Eco de la luz",
-    url: "https://www.youtube.com/embed/cBYHBq5Bv6w",
-  },
-  {
-    titulo: "El ultimo Destello",
-    url: "https://www.youtube.com/embed/dPt8XfZG0hY",
-  },
-  {
-    titulo: "Guardian del Fuego",
-    url: "https://www.youtube.com/embed/XbByIAspsFs",
-  },
-  {
-    titulo: "Incierto Amanecer",
-    url: "https://www.youtube.com/embed/KPdlwgCdUkc",
-  },
-  {
-    titulo: "Fuego Imparable",
-    url: "https://www.youtube.com/embed/TvNwGxQzgAI",
-  },
-  {
-    titulo: "Eco del Alma",
-    url: "https://www.youtube.com/embed/TRcX7iL6T9w",
-  },
-  {
     titulo: "Legado del Viento",
     url: "https://www.youtube.com/embed/gWk_D4ao4Xw",
   },
   {
     titulo: "Guardianes del Alba",
+    url: "https://www.youtube.com/embed/pC3vgwIuqPE",
+  },
+  {
+    titulo: "Luz Indomita",
+    url: "https://www.youtube.com/embed/oWS3RZfPY70",
+  },
+  {
+    titulo: "Escudo del Alba",
+    url: "https://www.youtube.com/embed/ixcR26z1tEw",
+  },
+  {
+    titulo: "Cuando la Luz toca el Acero",
+    url: "https://www.youtube.com/embed/mZIjwrCcxBM",
+  },
+  {
+    titulo: "Llama Eterna",
     url: "https://www.youtube.com/embed/",
   },
 ];
