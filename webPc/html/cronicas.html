@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,22 +8,59 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/cronicas.css" />
-    <title>Cronicas</title>
+    <script src="../src/cronicas.js" defer></script>
+
+    <title>Crónicas</title>
   </head>
+
   <body>
-    <h1>La Leyenda de los Guardianes del Alba</h1>
-    <p>
-      En un mundo donde la oscuridad avanza en silencio, tres luces permanecen
-      en pie.<br /><br />
-      Las leyendas hablan de almas que, en tiempos antiguos, se alzaron no por
-      gloria, sino por aquello que aún merecía ser protegido. En las grietas de
-      la noche, donde nacen las batallas invisibles, surge un eco que nunca
-      muere: el llamado del Alba.<br /><br />
-      Dawn Of Redemption reúne historias de valor, fragilidad, sacrificio y
-      esperanza. Aquí, la música no solo se escucha: se vive, se siente, y guía
-      el corazón hacia la luz que resiste incluso en la sombra más profunda.<br /><br />
-      Bienvenido al comienzo de la historia.<br />
-      Bienvenido al Alba.
-    </p>
+    <div class="contenedor-cronicas">
+      <!-- BARRA LATERAL -->
+      <aside class="lateral">
+        <button data-file="intro" data-titulo="Introducción" class="activo">
+          Introducción
+        </button>
+
+        <button
+          data-file="./cronicas/meibel.txt"
+          data-titulo="Meibel, Luz Indomita"
+        >
+          Meibel, Luz Indomita
+        </button>
+
+        <button
+          data-file="./cronicas/arkenor.txt"
+          data-titulo="Arkenor, Escudo del Alba"
+        >
+          Arkenor, Escudo del Alba
+        </button>
+
+        <button
+          data-file="./cronicas/pirocles.txt"
+          data-titulo="Pirocles, Llama Eterna"
+        >
+          Pirocles, Llama Eterna
+        </button>
+
+        <button
+          data-file="./cronicas/alba.txt"
+          data-titulo="Donde Nace el Alba"
+        >
+          Donde Nace el Alba
+        </button>
+
+        <button
+          data-file="./cronicas/resurgir.txt"
+          data-titulo="El Resurgir del Caballero"
+        >
+          El Resurgir del Caballero
+        </button>
+      </aside>
+
+      <!-- CONTENIDO -->
+      <main class="contenido" id="contenidoCronicas">
+        <!-- El JS inserta el titulo + el texto aquí -->
+      </main>
+    </div>
   </body>
 </html>

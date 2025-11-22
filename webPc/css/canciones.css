@@ -10,7 +10,7 @@ body {
 /* GRID */
 .contenedor-canciones {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 300px 1fr;
   height: 100vh;
 }
 
@@ -50,8 +50,6 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-family: "Cinzel Decorative", serif;
-
-  text-transform: uppercase;
   white-space: nowrap;
   width: 100%;
   text-align: left;
