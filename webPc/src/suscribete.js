@@ -1,29 +1,38 @@
 document.getElementById("formSuscribir").addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault(); // Bloquea el envío real
 
-  const nombre = document.getElementById("nombre").value;
-  const email = document.getElementById("email").value;
-  const mensaje = document.getElementById("mensaje").value;
+  const formData = new FormData(e.target);
 
-  const contenedor = document.getElementById("mensajeExito");
+  // --- Simulación cuerpo POST ---
+  const datosPost = {
+    nombre: formData.get("nombre"),
+    email: formData.get("email"),
+    mensaje: formData.get("mensaje"),
+  };
 
-  contenedor.innerHTML = `
-    <strong>✔ ¡Formulario enviado correctamente!</strong><br><br>
-    <strong>Nombre:</strong> ${nombre}<br>
-    <strong>Email:</strong> ${email}<br>
-    <strong>Mensaje:</strong> ${mensaje}
+  // --- Mostrar POST en texto ---
+  const mensaje = document.getElementById("mensajePost");
+  mensaje.innerHTML = `
+    <strong>✔ POST enviado correctamente</strong><br>
+    <strong>Método:</strong> POST<br>
+    <strong>Datos:</strong><br>
+    • Nombre: ${datosPost.nombre}<br>
+    • Email: ${datosPost.email}<br>
+    • Mensaje: ${datosPost.mensaje}
   `;
+  mensaje.style.opacity = "1";
 
-  contenedor.style.display = "block";
+  // --- Mostrar JSON ---
+  const json = document.getElementById("jsonPost");
+  json.textContent = JSON.stringify(datosPost, null, 2);
+  json.style.opacity = "1";
 
-  setTimeout(() => {
-    contenedor.style.opacity = 1;
-  }, 100);
-
+  // --- Reset del formulario ---
   e.target.reset();
 
-  // Ocultar después de unos segundos
+  // --- Ocultar todo después de unos segundos ---
   setTimeout(() => {
-    contenedor.style.opacity = 0;
-  }, 5000);
+    mensaje.style.opacity = "0";
+    json.style.opacity = "0";
+  }, 10000);
 });

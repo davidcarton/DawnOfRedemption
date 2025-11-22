@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- RUTA CORREGIDA: solo un nivel atrás ../  -->
+    <link rel="stylesheet" href="../css/movil.css" />
+    <script src="../src/cronicas.js" defer></script>
+
+    <title>Crónicas</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="../css/img/titulo.png" alt="Dawn Of Redemption" class="logo" />
+    </header>
+
+    <main class="cronicas-main">
+      <!-- LISTA DE HISTORIAS -->
+      <div id="listaHistorias" class="cronicas-lista">
+        <button data-historia="cronicas/meibel.txt" class="btn-cronica">
+          Meibel, Luz Indómita
+        </button>
+
+        <button data-historia="cronicas/arkenor.txt" class="btn-cronica">
+          Arkenor, Escudo del Alba
+        </button>
+
+        <button data-historia="cronicas/pirocles.txt" class="btn-cronica">
+          Pirocles, Llama Eterna
+        </button>
+
+        <button data-historia="cronicas/alba.txt" class="btn-cronica">
+          Donde Nace el Alba
+        </button>
+
+        <button data-historia="cronicas/resurgir.txt" class="btn-cronica">
+          El Resurgir del Caballero
+        </button>
+
+        <a href="../index.html" class="btn-volver-index">Volver al inicio</a>
+      </div>
+
+      <!-- TEXTO HISTORIA -->
+      <div id="contenidoHistoria" class="cronicas-contenido"></div>
+
+      <!-- BOTÓN VOLVER A LISTA -->
+      <button id="btnVolverLista" class="btn-volver-lista" hidden>
+        ← Volver a historias
+      </button>
+    </main>
+  </body>
+</html>

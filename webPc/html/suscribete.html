@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/suscribete.css" />
+    <script src="../src/suscribete.js" defer></script>
     <title>Suscríbete</title>
   </head>
 
@@ -18,18 +19,21 @@
         <div class="tarjeta">
           <h2>Suscríbete</h2>
 
-          <form>
+          <form id="formSuscribir" method="POST">
             <label>Nombre</label>
-            <input type="text" />
+            <input type="text" name="nombre" required />
 
             <label>Email</label>
-            <input type="email" />
+            <input type="email" name="email" required />
 
             <label>Mensaje</label>
-            <textarea></textarea>
+            <textarea name="mensaje"></textarea>
 
-            <button class="boton-enviar">Enviar</button>
+            <button type="submit" class="boton-enviar">Enviar</button>
           </form>
+
+          <div id="mensajePost" class="mensaje-post"></div>
+          <div id="jsonPost" class="json-post"></div>
         </div>
 
         <!-- MAPA -->
