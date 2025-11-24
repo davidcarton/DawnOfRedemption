@@ -8,7 +8,7 @@
 /* GRID + FONDO */
 body {
   background-image: url("./img/logoFondo.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   background-color: black;
@@ -176,14 +176,13 @@ footer {
   margin-top: 15px;
   padding: 10px;
 
-  background: rgba(255, 215, 0, 0.35);
-  border: 1px solid gold;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 215, 0, 0.4);
   border-radius: 6px;
 
+  color: white;
   font-family: "Cinzel Decorative", serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: black;
+  letter-spacing: 0.5px;
   text-align: center;
 }
 
