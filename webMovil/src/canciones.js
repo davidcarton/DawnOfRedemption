@@ -1,16 +1,13 @@
-// ======================================================================
-//   CANCIONES – abrir YouTube al pulsar un .cuadro
-// ======================================================================
-document.addEventListener("click", (e) => {
-  // Primero: permitir que los enlaces <a> funcionen normalmente
-  if (e.target.tagName === "A") return;
+document.addEventListener("DOMContentLoaded", () => {
+  const lista = document.getElementById("listaCanciones");
 
-  // Detectar si se pulsó un cuadro
-  const cuadro = e.target.closest(".cuadro");
-  if (!cuadro) return;
+  document.addEventListener("click", (e) => {
+    const cuadro = e.target.closest(".cuadro");
+    if (!cuadro) return;
 
-  const url = cuadro.dataset.url;
-  if (url) {
-    window.open(url, "_blank");
-  }
+    const id = cuadro.dataset.id;
+
+    // Abrir visor.html pasando el ID en la URL
+    window.location.href = `visor.html?id=${id}`;
+  });
 });

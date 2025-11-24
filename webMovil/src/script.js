@@ -1,6 +1,4 @@
-// ======================================================================
-//   DETECCIÓN: Cambios entre PC ↔ Móvil (solo en index.html)
-// ======================================================================
+//   DETECCIÓN: Cambios entre PC ↔ Móvil
 if (window.location.pathname.endsWith("index.html")) {
   window.addEventListener("resize", () => {
     const esMovil = window.matchMedia("(max-width: 768px)").matches;

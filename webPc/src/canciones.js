@@ -22,7 +22,15 @@ const canciones = [
   },
   {
     titulo: "Llama Eterna",
-    url: "https://www.youtube.com/embed/",
+    url: "https://www.youtube.com/embed/U4M5CeCjC1w",
+  },
+  {
+    titulo: "Donde nace el Alba",
+    url: "https://www.youtube.com/embed/FaR6TMRleDM",
+  },
+  {
+    titulo: "El Daño de Arkenor",
+    url: "https://www.youtube.com/embed/cqBlfYjtYgM",
   },
 ];
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/movil.css" />
+    <link rel="stylesheet" href="../css/cancionesmov.css" />
+    <script src="../src/visor.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="../css/img/titulo.png" alt="Dawn Of Redemption" class="logo" />
+    </header>
+
+    <main>
+      <div id="visorCancion" class="visor-cancion">
+        <iframe
+          id="iframeCancion"
+          src=""
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <button id="btnVolverCanciones">Volver a canciones</button>
+      </div>
+    </main>
+  </body>
+</html>

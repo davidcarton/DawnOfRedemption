@@ -6,8 +6,9 @@ document.getElementById("formSuscribir").addEventListener("submit", (e) => {
   // --- Simulación cuerpo POST ---
   const datosPost = {
     nombre: formData.get("nombre"),
+    apellido: formData.get("apellido"),
     email: formData.get("email"),
-    mensaje: formData.get("mensaje"),
+    telefono: formData.get("telefono"),
   };
 
   // --- Mostrar POST en texto ---
@@ -17,8 +18,10 @@ document.getElementById("formSuscribir").addEventListener("submit", (e) => {
     <strong>Método:</strong> POST<br>
     <strong>Datos:</strong><br>
     • Nombre: ${datosPost.nombre}<br>
+    • Apellido: ${datosPost.apellido}<br>
     • Email: ${datosPost.email}<br>
-    • Mensaje: ${datosPost.mensaje}
+    • Telefono: ${datosPost.telefono}
+    
   `;
   mensaje.style.opacity = "1";
 

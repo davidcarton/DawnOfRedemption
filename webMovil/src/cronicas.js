@@ -1,12 +1,9 @@
-// ======================================================================
-//   CRÓNICAS – cargar historias .txt y volver a la lista
-// ======================================================================
 document.addEventListener("DOMContentLoaded", () => {
   const lista = document.getElementById("listaHistorias");
   const contenido = document.getElementById("contenidoHistoria");
   const btnVolver = document.getElementById("btnVolverLista");
 
-  if (!lista) return; // si no estamos en cronicas.html
+  if (!lista) return;
 
   const botones = lista.querySelectorAll(".btn-cronica");
 
