@@ -32,6 +32,18 @@ const canciones = [
     titulo: "El Daño de Arkenor",
     url: "https://www.youtube.com/embed/cqBlfYjtYgM",
   },
+  {
+    titulo: "Guia de Fuego",
+    url: "https://www.youtube.com/embed/v6sHhMpSrSo",
+  },
+  {
+    titulo: "Fuente de Luz",
+    url: "https://www.youtube.com/embed/Fbr5MgExTHI",
+  },
+  {
+    titulo: "Primera Armonia",
+    url: "https://www.youtube.com/embed/siglthQAELM",
+  },
 ];
 
 // Crear boton con url
